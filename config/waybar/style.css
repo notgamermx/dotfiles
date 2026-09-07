@@ -1,0 +1,74 @@
+/* =============================================================================
+   Waybar Style Sheet - Custom Dark Theme
+   Glassmorphism blur is handled natively via Hyprland blurls = waybar
+   ============================================================================= */
+
+@define-color bg-dark rgba(17, 17, 27, 0.65);
+@define-color bg-hover rgba(49, 50, 68, 0.6);
+@define-color text-main #cdd6f4;
+@define-color accent #89b4fa;
+@define-color urgent #f38ba8;
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", Roboto, sans-serif;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: @text-main;
+}
+
+/* --- Common Module Container Styling --- */
+#workspaces,
+#window,
+#clock,
+#pulseaudio,
+#cpu,
+#memory,
+#network,
+#battery,
+#tray {
+    background-color: @bg-dark;
+    padding: 4px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* --- Workspaces --- */
+#workspaces button {
+    padding: 0 6px;
+    color: @text-main;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+#workspaces button:hover {
+    background-color: @bg-hover;
+}
+
+#workspaces button.active {
+    color: @accent;
+    font-weight: bold;
+}
+
+#workspaces button.urgent {
+    color: @urgent;
+}
+
+/* --- Individual Module Adjustments --- */
+#clock {
+    font-weight: bold;
+    color: @accent;
+}
+
+#battery.warning {
+    color: #f9e2af;
+}
+
+#battery.critical {
+    color: @urgent;
+}
