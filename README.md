@@ -1,4 +1,4 @@
-# Custom Hyprland Dotfiles
+# Custom Hyprland Dotfiles 
 
 A modular, fluid, and robust dotfile configuration for Hyprland on Arch Linux, featuring smooth bezier animations, video wallpaper support via `mpvpaper`, and a clean Waybar setup.
 
